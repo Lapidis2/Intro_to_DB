@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SoftBeatz — stream millions of songs ad-free. Discover trending artists, curated playlists, and the hottest tracks."
+    />
+    <meta name="theme-color" content="#0a0c10" />
+    <title>SoftBeatz — Music Streaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="app-bg" aria-hidden="true">
+      <div class="app-bg__blob app-bg__blob--1"></div>
+      <div class="app-bg__blob app-bg__blob--2"></div>
+      <div class="app-bg__blob app-bg__blob--3"></div>
+    </div>
+
+    <div class="app">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="sidebar__brand">
+          <span class="sidebar__logo" aria-hidden="true">♪</span>
+          <span class="sidebar__name">Soft<span>Beatz</span></span>
+        </div>
+        <nav class="sidebar__nav">
+          <a href="#section-home" class="sidebar__link sidebar__link--active" data-section="home">
+            <span class="sidebar__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </span>
+            Home
+          </a>
+          <a href="#section-library" class="sidebar__link" data-section="library">
+            <span class="sidebar__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>
+            </span>
+            Library
+          </a>
+          <a href="#section-favorites" class="sidebar__link" data-section="favorites">
+            <span class="sidebar__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </span>
+            Favorites
+          </a>
+        </nav>
+        <p class="sidebar__hint">Press <kbd>Space</kbd> to play or pause</p>
+      </aside>
+
+      <div class="sidebar__overlay" id="sidebar-overlay" hidden aria-hidden="true"></div>
+
+      <div class="app__main">
+        <header class="top-header" id="top-header">
+          <div class="top-header__inner">
+            <button
+              type="button"
+              class="top-header__menu"
+              id="btn-menu"
+              aria-expanded="false"
+              aria-controls="sidebar"
+              aria-label="Open menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          
+            <nav class="top-header__nav" aria-label="Primary">
+              <a href="#section-home" class="top-header__link top-header__link--active">Home</a>
+              <a href="#section-spotlight" class="top-header__link">New arrivals</a>
+              <a href="#section-playlists" class="top-header__link">Download</a>
+              <a href="#newsletter" class="top-header__link">Pricing</a>
+            </nav>
+            <div class="top-header__search">
+              <label class="visually-hidden" for="search-input">Search music</label>
+              <svg class="top-header__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+              <input
+                type="search"
+                id="search-input"
+                class="top-header__input"
+                placeholder="Search songs, artists, playlists…"
+                autocomplete="off"
+              />
+            </div>
+            <div class="top-header__actions">
+              <button type="button" class="btn-theme" id="btn-theme" aria-pressed="false" title="Toggle light/dark theme">
+                <span class="btn-theme__sun" aria-hidden="true">☀</span>
+                <span class="btn-theme__moon" aria-hidden="true">☾</span>
+              </button>
+              <button type="button" class="btn btn--ghost">Log in</button>
+              <button type="button" class="btn btn--primary">Sign up</button>
+            </div>
+          </div>
+        </header>
+
+        <main id="main-content" class="main">
+          <section >
+             <div class="hero">
+    <div class="hero-text">
+      <h1>Music Without<br>Limits</h1>
+      <p>
+        Experience music the way it should be — ad-free, seamless, and unlimited.
+        Discover millions of tracks without interruption.
+      </p>
+      <button class="cta">Signup</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/singer.png" alt="artist">
+    </div>
+  </div>
+          </section>
+          <section class="section section--hero reveal" id="section-home">
+            <div class="hero-week">
+              <div class="hero-week__intro">
+                <h1 class="heading heading--xl gradient-text">The Sound of the Week: Fresh &amp; Hot</h1>
+                <p class="text-muted">
+                  Experience music the way it should be—ad-free, seamless, and unlimited. Discover millions of tracks
+                  without interruption.
+                </p>
+              </div>
+              <div class="hero-week__cards" id="hottest-tracks">
+                <article class="track-card track-card--featured" data-search="sense mark band">
+                  <div class="track-card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80"
+                      alt="Album artwork for Sense by Mark Band"
+                      width="300"
+                      height="430"
+                      loading="eager"
+                    />
+                    <button type="button" class="track-card__play" data-play-index="0" aria-label="Play Sense">
+                      <span class="track-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="track-card__body">
+                    <h2 class="track-card__title">Sense</h2>
+                    <p class="track-card__artist">Mark Band</p>
+                    <div class="track-card__meta">
+                      <span class="track-card__badge" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </span>
+                      <span>136K listens</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="track-card track-card--highlight reveal reveal--delay-1" data-search="feel the beats aurora diane">
+                  <div class="track-card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80"
+                      alt="Album artwork for Feel The Beats by Aurora Diane"
+                      width="300"
+                      height="430"
+                      loading="lazy"
+                    />
+                    <button type="button" class="track-card__play" data-play-index="1" aria-label="Play Feel The Beats">
+                      <span class="track-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="track-card__body">
+                    <h2 class="track-card__title">Feel The Beats</h2>
+                    <p class="track-card__artist">Aurora Diane</p>
+                    <div class="track-card__meta">
+                      <span class="track-card__badge" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </span>
+                      <span>321K listens</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="track-card reveal reveal--delay-2" data-search="echoes vega nightly">
+                  <div class="track-card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80"
+                      alt="Album artwork for Echoes by Vega Nightly"
+                      width="300"
+                      height="430"
+                      loading="lazy"
+                    />
+                    <button type="button" class="track-card__play" data-play-index="2" aria-label="Play Echoes">
+                      <span class="track-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="track-card__body">
+                    <h2 class="track-card__title">Echoes</h2>
+                    <p class="track-card__artist">Vega Nightly</p>
+                    <div class="track-card__meta">
+                      <span class="track-card__badge" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </span>
+                      <span>89K listens</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--spotlight reveal" id="section-spotlight">
+            <div class="spotlight">
+              <div class="spotlight__content">
+                <p class="spotlight__eyebrow">Only on SoftBeatz</p>
+                <h2 class="heading heading--lg gradient-text">Shreya Ghoshal</h2>
+                <p class="spotlight__desc text-muted">
+                  Aria Van Rose is a rising star in the music industry, captivating audiences with powerful vocals and
+                  emotive performances.
+                </p>
+              </div>
+              <div class="spotlight__visual">
+                <div class="spotlight__figure">
+                 <img src="images/girlsinger.png" alt="artist">
+                </div>
+                <div class="glass-panel glass-panel--songs" id="section-library">
+                  <div class="glass-panel__head">
+                    <h3 class="glass-panel__title">Latest Songs</h3>
+                    <button type="button" class="glass-panel__link">View all</button>
+                  </div>
+                  <ul class="song-list" id="song-list">
+                    <!-- rows injected match Figma copy; playable -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section reveal" id="section-playlists">
+            <div class="section__head">
+              <h2 class="heading heading--md gradient-text">Dive Into a World of Unlimited Sound</h2>
+              <p class="text-muted section__sub">
+                Experience music the way it should be—ad-free, seamless, and unlimited. Discover millions of tracks without
+                interruption.
+              </p>
+            </div>
+            <div class="playlist-scroll">
+              <div class="playlist-grid" id="playlist-cards">
+                <article class="playlist-card" data-search="hip hop 312">
+                  <div class="playlist-card__image">
+                    <img src="https://images.unsplash.com/photo-1571266028243-e473f6abe6b0?w=500&q=80" alt="" width="358" height="490" loading="lazy" />
+                    <div class="playlist-card__overlay"></div>
+                    <button type="button" class="playlist-card__play" data-play-index="3" aria-label="Play Hip Hop playlist">
+                      <span class="playlist-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="playlist-card__footer">
+                    <h3 class="playlist-card__name">Hip Hop</h3>
+                    <p class="playlist-card__count">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      312 songs
+                    </p>
+                  </div>
+                  <div class="playlist-card__shadow" aria-hidden="true"></div>
+                </article>
+                <article class="playlist-card" data-search="soul 814">
+                  <div class="playlist-card__image">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80" alt="" width="358" height="490" loading="lazy" />
+                    <div class="playlist-card__overlay"></div>
+                    <button type="button" class="playlist-card__play" data-play-index="4" aria-label="Play Soul playlist">
+                      <span class="playlist-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="playlist-card__footer">
+                    <h3 class="playlist-card__name">Soul</h3>
+                    <p class="playlist-card__count">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      814 songs
+                    </p>
+                  </div>
+                  <div class="playlist-card__shadow" aria-hidden="true"></div>
+                </article>
+                <article class="playlist-card" data-search="summer hits 375">
+                  <div class="playlist-card__image">
+                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500&q=80" alt="" width="358" height="490" loading="lazy" />
+                    <div class="playlist-card__overlay"></div>
+                    <button type="button" class="playlist-card__play" data-play-index="5" aria-label="Play Summer Hits playlist">
+                      <span class="playlist-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="playlist-card__footer">
+                    <h3 class="playlist-card__name">Summer Hits</h3>
+                    <p class="playlist-card__count">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      375 songs
+                    </p>
+                  </div>
+                  <div class="playlist-card__shadow" aria-hidden="true"></div>
+                </article>
+                <article class="playlist-card" data-search="r&b 731 rnb">
+                  <div class="playlist-card__image">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&q=80" alt="" width="358" height="490" loading="lazy" />
+                    <div class="playlist-card__overlay"></div>
+                    <button type="button" class="playlist-card__play" data-play-index="6" aria-label="Play R&B playlist">
+                      <span class="playlist-card__play-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="playlist-card__footer">
+                    <h3 class="playlist-card__name">R&amp;B</h3>
+                    <p class="playlist-card__count">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                      731 songs
+                    </p>
+                  </div>
+                  <div class="playlist-card__shadow" aria-hidden="true"></div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section reveal" id="section-favorites">
+            <div class="section__head section__head--row">
+              <div>
+                <h2 class="heading heading--md gradient-text">Trending Artists</h2>
+                <p class="text-muted section__sub narrow">
+                  Discover the hottest artists today. From emerging talents to established stars—we’ve got you covered.
+                </p>
+              </div>
+              <button type="button" class="btn btn--primary btn--wide">See all (382)</button>
+            </div>
+            <div class="artist-grid" id="artist-grid">
+              <article class="artist-card" data-search="a r rahman">
+                <div class="artist-card__avatar">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="" width="200" height="200" loading="lazy" />
+                </div>
+                <h3 class="artist-card__name">A. R. Rahman</h3>
+                <p class="artist-card__meta">16 songs</p>
+                <span class="artist-card__cta">Explore →</span>
+              </article>
+              <article class="artist-card" data-search="arijit singh">
+                <div class="artist-card__avatar">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="" width="200" height="200" loading="lazy" />
+                </div>
+                <h3 class="artist-card__name">Arijit Singh</h3>
+                <p class="artist-card__meta">32 songs</p>
+                <span class="artist-card__cta">Explore →</span>
+              </article>
+              <article class="artist-card" data-search="yo yo honey singh">
+                <div class="artist-card__avatar">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80" alt="" width="200" height="200" loading="lazy" />
+                </div>
+                <h3 class="artist-card__name">Yo Yo Honey Singh</h3>
+                <p class="artist-card__meta">26 songs</p>
+                <span class="artist-card__cta">Explore →</span>
+              </article>
+              <article class="artist-card" data-search="sidhu moose wala">
+                <div class="artist-card__avatar">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="" width="200" height="200" loading="lazy" />
+                </div>
+                <h3 class="artist-card__name">Sidhu Moose Wala</h3>
+                <p class="artist-card__meta">23 songs</p>
+                <span class="artist-card__cta">Explore →</span>
+              </article>
+              <article class="artist-card" data-search="shreya ghoshal">
+                <div class="artist-card__avatar">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="" width="200" height="200" loading="lazy" />
+                </div>
+                <h3 class="artist-card__name">Shreya Ghoshal</h3>
+                <p class="artist-card__meta">11 songs</p>
+                <span class="artist-card__cta">Explore →</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="section reveal" id="newsletter">
+            <div class="newsletter">
+              <div class="newsletter__glow newsletter__glow--1" aria-hidden="true"></div>
+              <div class="newsletter__glow newsletter__glow--2" aria-hidden="true"></div>
+              <div class="newsletter__inner">
+                <h2 class="heading heading--lg gradient-text">Don’t Miss a Beat!</h2>
+                <p class="newsletter__text text-muted">
+                  Sign up for our newsletter—exclusive offers, new releases, and artist spotlights. Stay in the loop with
+                  the freshest music.
+                </p>
+                <form class="newsletter__form" id="newsletter-form">
+                  <div class="newsletter__field">
+                    <label for="newsletter-email">Email</label>
+                    <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required />
+                  </div>
+                  <button type="submit" class="newsletter__submit" aria-label="Subscribe">
+                    <span aria-hidden="true">➤</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <div class="footer__grid">
+            <div>
+              <h2 class="footer__brand">SoftBeatz</h2>
+              <p class="text-muted footer__tagline">
+                Experience music the way it should be—ad-free, seamless, and unlimited.
+              </p>
+            </div>
+            <div>
+              <h3 class="footer__heading">Get started</h3>
+              <ul class="footer__links">
+                <li><a href="#">Download app</a></li>
+                <li><a href="#">New releases</a></li>
+                <li><a href="#">Originals</a></li>
+                <li><a href="#">Plans</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__heading">Account</h3>
+              <ul class="footer__links">
+                <li><a href="#">Sign in</a></li>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__heading">Pride</h3>
+              <ul class="footer__links">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>© 2026 SoftBeatz</p>
+            <nav class="footer__legal" aria-label="Legal">
+              <a href="#">Cookie settings</a>
+              <a href="#">Terms</a>
+              <a href="#">Privacy</a>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div class="player" id="player-bar" role="region" aria-label="Audio player">
+      <div class="player__track">
+        <img id="player-cover" src="" alt="" width="56" height="56" class="player__cover" />
+        <div class="player__info">
+          <p class="player__title" id="player-title">—</p>
+          <p class="player__artist" id="player-artist">—</p>
+        </div>
+        <button type="button" class="player__like" id="player-like" aria-pressed="false" aria-label="Add to favorites">
+          ♡
+        </button>
+      </div>
+      <div class="player__controls">
+        <button type="button" class="player__btn" id="btn-prev" aria-label="Previous track">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button type="button" class="player__btn player__btn--main" id="btn-play" aria-label="Play">
+          <svg class="icon-play" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="icon-pause" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button type="button" class="player__btn" id="btn-next" aria-label="Next track">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+        </button>
+      </div>
+      <div class="player__progress-wrap">
+        <span class="player__time" id="player-current">0:00</span>
+        <div class="player__progress" id="progress-track" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" aria-label="Playback position">
+          <div class="player__progress-fill" id="progress-fill"></div>
+          <div class="player__progress-thumb" id="progress-thumb"></div>
+        </div>
+        <span class="player__time" id="player-duration">0:00</span>
+      </div>
+    </div>
+
+    <audio id="audio-el" preload="metadata"></audio>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
