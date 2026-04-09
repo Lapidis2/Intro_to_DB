@@ -1290,7 +1290,9 @@ button {
   font-size: 1.75rem;
   font-weight: 800;
 }
-
+.footer__brand span {
+  color: var(--color-accent);
+}
 .footer__tagline {
   max-width: 36ch;
 }
